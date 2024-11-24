@@ -1,24 +1,23 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
 #include<time.h>
-void random(int b){
-    int c=rand()%100+1;
-
-    if (b==c)
+#include<stdlib.h>
+void guess(int a){
+    int b=rand()%100+1;
+    if (a==b)
     {
-        printf("Yay! YOu guessed it right\n");
+        printf("You guessed it right!\n");
     }
     else{
-        printf("Sorry, you guessed it wrong\n");
+        printf("You guessed it wrong! The random number generated was %d\n",b);
     }
-    printf("The random number was:%d",c);
+    
+
 }
 int main(){
-    int a;
-    srand(time(NULL));
-    printf("Enter a number and lets check if the guess is right or wrong:\n");
-    scanf("%d",&a);
-    random(a);
+    int num;
+    srand(1200);
+    printf("Enter the number to be checked:\n");
+    scanf("%d",&num);
+    guess(num);
     return 0;
 }
