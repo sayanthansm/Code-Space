@@ -1,3 +1,4 @@
+#using secrets instead of random to generate cryptographically secure values
 import secrets 
 import string
 def password_generator(len=12):
