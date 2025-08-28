@@ -1,3 +1,4 @@
+#The core idea of this code is to understand Regex which is used for pattern identification
 import re
 def password_validation(password):
     if len(password)<8:
